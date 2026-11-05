@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image:  url('https://i.pinimg.com/736x/1a/85/51/1a8551ca9c424f8e5768807d26a67bdb.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+/* Distinct, solid modern dark header */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0f172a; /* Solid dark color so it doesn't blend into the body gradient */
+    padding: 18px 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav h2 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+nav a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 0 20px;
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    border:#1e293b;
+}
+
+input, select {
+    padding: 12px 18px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 8px;
+}
+
+.search-box input {
+    width: 60%;
+    border-radius: 30px 0 0 30px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #111;
+}
+
+.search-box button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    background-color: #3b82f6;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #2563eb;
+}
+
+.panel {
+    background: rgba(15, 23, 42, 0.75); /* Dark translucent panel for great contrast */
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* Exactly 5 books per row */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.book-card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 12px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.book-card h4 {
+    color: #1e293b; /* Dark navy for book title */
+    margin: 10px 0 5px;
+    font-size: 0.9rem;
+    overflow: hidden;
+}
+
+.book-card p {
+    color: #475569; /* Dark slate grey for author name */
+    font-size: 0.75rem;
+    margin: 0;
+    height: 20px;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+th {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.actions button {
+    padding: 6px 12px;
+    margin-right: 5px;
+    font-size: 0.85rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-edit { background-color: #f59e0b; }
+.btn-edit:hover { background-color: #d97706; }
+.btn-delete { background-color: #ef4444; }
+.btn-delete:hover { background-color: #dc2626; }
+
+/* Full-width footer */
+footer {
+    background: #0f172a;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+/* Categories Grid & Card Styling */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+}
+
+.cat-card {
+    background: #ffffff;
+    color: #1e293b;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.cat-card:hover {
+    background: #f8fafc;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(59, 130, 246, 0.3);
+    border-color: #3b82f6;
+}
+
+.cat-icon {
+    font-size: 1.3rem;
+}
+
+/* Top Banner Styling */
+/* Top Banner with Image Background */
+.top-banner {
+    
+    background: rgba(177, 196, 74, 0.9);
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    min-height: 220px; 
+    
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    
+    /* Ensures the image content is centered nicely */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-banner h1 {
+    margin: 0 0 8px 0;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.top-banner p {
+    margin: 0;
+    font-size: 20px;
+    
+}
+
+/* Modal Backdrop Overlay */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background: #414136;
+    color: #ffffff;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 16px;
+    padding: 25px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    animation: popupFade 0.25s ease-out;
+}
+
+@keyframes popupFade {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Close Button */
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fcfcfc;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal-close-btn:hover {
+    color: #ffffff;
+}
+
+/* Inner Layout inside Modal */
+.modal-detail-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.modal-cover {
+    width: 160px;
+    height: 230px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.modal-stats {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-synopsis {
+    font-size: 0.85rem;
+    color: #fcfcfc;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 20px;
+    max-height: 120px;
+    overflow-y: auto;
+}

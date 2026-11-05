@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iMybook - Reading Watchlist & CRUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Banner Section -->
+    <div class="top-banner">
+        <h1>Welcome to iMybook </h1>
+        <p>Explore thousands of books, manage your reading watchlist, and track your literary journey.</p>
+    </div>
+
+    <nav>
+        <h2>iMybook Application</h2>
+        <div>
+            <a href="index.html" style="margin-right: 20px;">Search & Suggestions</a>
+            <a href="readinglist.html">Reading Watchlist (CRUD)</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+
+        <h1 style="color: rgb(152, 176, 78); text-shadow: none;">My Reading Watchlist & Plans</h1>
+
+        <!-- Task 5: Create / Update Form -->
+        <div class="panel">
+            <h3 id="formTitle">Add New Book Record</h3>
+            <input type="hidden" id="bookIndex" value="">
+            
+            <label>Book Title:</label><br>
+            <input type="text" id="bookTitleInput" placeholder="Enter book title" style="width: 1000px; margin: 8px 0 15px 0;">
+
+            <br>
+            <label>Author:</label><br>
+            <input type="text" id="bookAuthorInput" placeholder="Enter author name" style="width: 1000px; margin: 8px 0 15px 0;">
+            
+            <br>
+            <label>Reading Status:</label><br>
+            <select id="bookStatusInput" style="width: 100%; margin: 8px 0 15px 0;">
+                <option value="Want to Read">Want to Read</option>
+                <option value="Currently Reading">Currently Reading</option>
+                <option value="Completed">Completed</option>
+            </select>
+
+            <button id="saveBtn" style="padding: 10px 20px; border: none; border-radius: 6px; background-color: #10b981; color: white; font-weight: 600; cursor: pointer;">Save Record</button>
+            <p id="feedbackMsg" style="margin-top: 10px; font-size: 0.9rem;"></p>
+        </div>
+
+        <!-- Read Panel: Display Stored Records -->
+        <div class="panel">
+            <h3>Saved Reading Records</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="watchlistTableBody">
+                    <!-- Populated dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Full-Width Footer -->
+    <footer>
+        <p>📚 iMybook Application &copy; 2026 | Built for Desktop</p>
+    </footer>
+
+    <!-- Link to external readinglist.js -->
+    <script src="readinglist.js"></script>
+</body>
+</html>

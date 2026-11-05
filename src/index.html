@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iMybook - Book Search & Suggestions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Banner Section -->
+    <div class="top-banner">
+        <h1>Welcome to iMybook </h1>
+        <p>Explore thousands of books, manage your reading watchlist, and track your literary journey.</p>
+    </div>
+
+    <nav>
+        <h2>iMybook Application</h2>
+        <div>
+            <a href="index.html" style="margin-right: 20px;">Search & Suggestions</a>
+            <a href="readinglist.html">Reading Watchlist</a>
+        </div>
+    </nav>
+
+    <!-- Book Details Popup Modal -->
+    <div id="bookModal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="closeModalBtn" class="modal-close-btn">&times;</button>
+            <div id="modalBody">
+                <!-- Dynamic book details injected via app.js -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 style="color: rgb(152, 176, 78); text-shadow: none;">Explore & Discover Books</h1>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search for books by title or author...">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        
+
+        <!-- Task 3: Smart Reading Recommendation -->
+        <div class="panel">
+            <h3 style="margin-bottom: 15px;">Categories</h3>
+            <div class="categories-grid" id="categoriesGrid">
+                <button class="cat-card" data-query="self-growth">
+                    <span class="cat-icon">⛺</span> Self-Growth
+                </button>
+                <button class="cat-card" data-query="happiness">
+                    <span class="cat-icon">😊</span> Happiness
+                </button>
+                <button class="cat-card" data-query="finance investments">
+                    <span class="cat-icon">💳</span> Money & Investments
+                </button>
+                <button class="cat-card" data-query="negotiation">
+                    <span class="cat-icon">📢</span> Negotiation
+                </button>
+                <button class="cat-card" data-query="productivity">
+                    <span class="cat-icon">⏳</span> Productivity
+                </button>
+                <button class="cat-card" data-query="business career">
+                    <span class="cat-icon">🔒</span> Business & Career
+                </button>
+                <button class="cat-card" data-query="leadership">
+                    <span class="cat-icon">🏅</span> Leadership
+                </button>
+                <button class="cat-card" data-query="romance relationships">
+                    <span class="cat-icon">💘</span> Love 
+                </button>
+            </div>
+        </div>
+
+        <!-- Task 4: Meaningful Calculation Panel -->
+        <div class="panel">
+            <h3>Reading Time & Pace Calculator</h3>
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                <div>
+                    <label>Total Pages:</label><br>
+                    <input type="number" id="totalPages" placeholder="e.g. 350" style="width: 150px;">
+                </div>
+                <div>
+                    <label>Pages Read / Day:</label><br>
+                    <input type="number" id="pagesPerDay" placeholder="e.g. 25" style="width: 150px;">
+                </div>
+                <div style="margin-top: 20px;">
+                    <button id="calcBtn" style="background-color: #8b5cf6; padding: 12px 20px; border: none; border-radius: 8px; color: white; cursor: pointer;">Calculate Completion</button>
+                </div>
+            </div>
+            <p id="calcResult" style="margin-top: 15px; font-weight: 500; color: #34d399;"></p>
+        </div>
+
+        <!-- Main Books Display Section (Used for both Search & Category clicks) -->
+        <div id="booksContainer" class="grid"></div>
+
+    </div>
+
+    <!-- Full-Width Footer -->
+    <footer>
+        <p>📚 iMybook Application &copy; 2026 | Built for Desktop</p>
+    </footer>
+
+    <!-- Link to external app.js -->
+    <script src="app.js"></script>
+</body>
+</html>
